@@ -21,6 +21,12 @@ class FactorialRegularInputTesting {
     @Test
     public void regularInputTest15() {
         String factorialOfN = factorial.factorial("15");
-        Assertions.assertEquals("2004310016", factorialOfN);
+        Assertions.assertEquals("1307674368000", factorialOfN);
+    }
+
+    @Test
+    public void regularInputTest25() {
+        String factorialOfN = factorial.factorial("50");
+        Assertions.assertEquals("30414093201713378043612608166064768844377641568960512000000000000", factorialOfN);
     }
 }

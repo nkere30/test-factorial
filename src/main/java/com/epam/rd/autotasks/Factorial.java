@@ -1,5 +1,6 @@
 package com.epam.rd.autotasks;
 
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class Factorial {
@@ -10,11 +11,11 @@ public class Factorial {
     public String factorial(String n) {
         if (isBadInput(n)) throw new IllegalArgumentException();
         int factorialStrToInt = Integer.parseInt(n); //Transform string to int
-        int factorialOfN = 1;
+        BigInteger factorialOfN = BigInteger.valueOf(1);
         for(int i = 1; i <= factorialStrToInt; i++) {
-            factorialOfN = factorialOfN * i;
+            factorialOfN = factorialOfN.multiply(BigInteger.valueOf(i));
         }
-        return Integer.toString(factorialOfN);
+        return factorialOfN.toString();
     }
 
     public boolean isBadInput(String n) {
