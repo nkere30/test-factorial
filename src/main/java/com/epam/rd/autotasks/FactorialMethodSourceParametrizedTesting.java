@@ -18,11 +18,11 @@ class FactorialMethodSourceParametrizedTesting {
         Assertions.assertEquals(factorialInput, expected);
     }
 
-    public static Stream<String[]> testCases() {
+    public static Stream<Arguments> testCases() {
         return Stream.of(
-                new String[]{"1", "1"},
-                new String[]{"2", "2"},
-                new String[]{"5", "120"}
+                Arguments.of("1", "1"),
+                Arguments.of("2", "2"),
+                Arguments.of("5", "120")
         );
     }
 }
